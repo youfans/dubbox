@@ -1,0 +1,6 @@
+--author:游锋锋
+--fix-bug:修复了dubbo中异步调用会多余传递一次异步属性的问题
+--fix-way:1、在dubbox\dubbo-rpc\dubbo-rpc-api\src\main\java\com\alibaba\dubbo\rpc\filter目录
+          下新增了AsyncFilter文件
+          2、并在同模块中的resource/META-INF.dubbo.internal的com.alibaba.dubbo.rpc.Filter
+          文件的末尾追加asyncFilter=com.alibaba.dubbo.rpc.filter.AsyncFilter
